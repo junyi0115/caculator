@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 class CaculatorApplicationTests {
 
 	private CalculatorService service = new CalculatorService();
-	 
+	
 	@Test
 	void testSum() {
 		System.out.println(service.sum(6,3));

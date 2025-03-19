@@ -1,0 +1,23 @@
+pipeline {
+	agent any
+	stages{
+		stage('checkout') {
+            steps {
+                echo 'check out'
+                git url: 'https://github.com/junyi0115/caculator.git', branch: 'main'
+            }
+        }
+		stage("Compile") {
+			steps {
+				sh "chmod +x ./gradlew"
+				sh "./gradlew compileJava"
+			}
+		}
+		stage("Unit Test") {
+            steps {
+                sh "./gradlew test"
+            }
+            
+        }
+	}
+}
