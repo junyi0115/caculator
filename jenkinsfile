@@ -40,5 +40,14 @@ pipeline {
 				sh "docker build -t eunjunyi/calculator"
 			}
 		}
+		
+		stage("Docker push"){
+			steps {
+				sh "echo 'nice1946@#' | docker login -u 'eunjunyi' --password-stdin"
+				sh "docker push eunjunyi/calculator"
+			}	
+		}
+			
+		
 	}
 }
