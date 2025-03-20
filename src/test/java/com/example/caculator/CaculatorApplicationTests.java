@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 //@SpringBootTest
-class CaculatorApplicationTests {
+class CaculatorApplicationTests { 
 
 	private CalculatorService service = new CalculatorService();
 	
